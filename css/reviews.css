@@ -1,0 +1,107 @@
+.carousel {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    /* Fixed height for consistency */
+}
+
+.carousel-left {
+    flex: 0 0 40%;
+    margin-right: 40px;
+}
+
+.carousel-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-outer {
+    flex: 1;
+    overflow: hidden;
+    /* Ensure only one item is visible */
+    height: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% * 5);
+    /* Number of slides */
+}
+
+.carousel-item {
+    min-width: 100%;
+    /* Each item takes full width of the outer container */
+    box-sizing: border-box;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review-content {
+    text-align: left;
+}
+
+.review-rating img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.review-rating span {
+    font-size: 14px;
+    color: #777;
+}
+
+h2 {
+    font-size: 36px;
+    color: #333;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.reviewer {
+    font-weight: bold;
+    color: #333;
+}
+
+.stars {
+    color: #ffa500;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Navigation buttons */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 36px;
+    color: #333;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: -50px;
+}
+
+.next-btn {
+    right: -50px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    color: #000;
+}
